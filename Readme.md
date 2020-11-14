@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Щеголева Анна](https://up.htmlacademy.ru/adaptive/21/user/1569193).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/id8589).
 
 ---
 
