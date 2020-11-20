@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>HTML Academy: Пинк</title>
 </head>
 <body class="page__body">
 <header class="page-header">
@@ -57,6 +57,84 @@
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
         </p>
       </div>
+      <form class="form__concurs" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="visually-hidden">Информация об участнике конкурса</h2>
+        <div class="form__participant form__participant-info">
+          <p class="form__item form__item-surname">
+            <label class="form__participant participant__surname" for="surname">ФАМИЛИЯ:</label>
+            <input class="field__surname" type="text" id="surname" aria-label="Фамилия участника конкурса" name="surname" value="Укажите фамилию *" required>
+          </p>
+          <p class="form__item form__item-name">
+            <label class="form__participant participant__name" for="name">ИМЯ:</label>
+            <input class="field__name" type="text" id="name" aria-label="Имя участника" name="name" value="Введите ваше имя *" required>
+          </p>
+          <p class="form__item form__item-patronymic">
+            <label class="form__participant participant__patronymic" for="name">ОТЧЕСТВО:</label>
+            <input class="field__patronymic" type="text" id="patronymic" aria-label="Отчество участника" name="patronymic" value="Ну и отчество тоже">
+          </p>
+        </div>
+        <fieldset class="form__option form__option-achievements">
+          <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="shark" id="shark" aria-label="" checked>
+            <label for="shark">Сделал селфи с акулой</label>
+          </p>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="beach" id="beach" aria-label="" checked>
+            <label for="beach">Обгорел на пляже</label>
+          </p>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="norris" id="norris" aria-label="">
+            <label for="norris">Видел Чака Норриса</label>
+          </p>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="souvenirs" id="souvenirs" aria-label="">
+            <label for="souvenirs">Накупил сувениров</label>
+          </p>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="tower" id="tower" aria-label="" checked>
+            <label for="tower">Удержал башню</label>
+          </p>
+          <p class="checkbox__item checkbox__item-achievements">
+            <input type="checkbox" class="visually-hidden" name="hotel" id="hotel" aria-label="">
+            <label for="hotel">Разгромил отель</label>
+          </p>
+        </fieldset>
+        <div class="form__participant form__participant-contacts">
+          <p class="form__item form__item-phone">
+            <label class="form__participant participant__phone" for="phone">НОМЕР ТЕЛЕФОНА</label>
+            <input class="field__phone" type="text" id="phone" aria-label="Номер телефона участника конкурса" name="phone" value="Номер, пожалуйста">
+          </p>
+          <p class="form__item form__item-email">
+            <label class="form__participant participant__email" for="email">АДРЕС ПОЧТЫ</label>
+            <input class="field__email" type="text" id="email" aria-label="Номер телефона участника конкурса" name="email" value="Введите почту *" required>
+          </p>
+        </div>
+        <fieldset class="form__option form__option-apps">
+          <legend class="apps__title">С каким приложением путешествовали?</legend>
+          <p class="checkbox__item checkbox__item-apps">
+            <input type="checkbox" class="visually-hidden" name="ios" id="ios" aria-label="" checked>
+            <label for="ios">Pink для iOS</label>
+          </p>
+          <p class="checkbox__item checkbox__item-apps">
+            <input type="checkbox" class="visually-hidden" name="android" id="android" aria-label="">
+            <label for="android">Pink на Android</label>
+          </p>
+          <p class="checkbox__item checkbox__item-apps">
+            <input type="checkbox" class="visually-hidden" name="windows" id="windows" aria-label="">
+            <label for="windows">Windows Phone</label>
+          </p>
+        </fieldset>
+        <div class="form__participant form__participant-comment">
+          <p class="participant__comment-title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
+          <textarea class="participant__comment-text" rows="8" name="comment">
+            Можно прям в красках, не стесняясь в выражениях
+          </textarea>
+          </div>
+        <button class="button button--green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
+        <p class="form__field--required">* — обязательные поля</p>
+
+      </form>
 
 
     </div>
