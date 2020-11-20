@@ -16,7 +16,7 @@
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item  site-list__item--active">
-          <a>
+          <a href="index.html">
             Главная
           </a>
         </li>
@@ -25,8 +25,8 @@
             Фотографии
           </a>
         </li>
-        <li class="site-list__item">
-          <a href="form.html">
+        <li class="site-list__item site-list__item--current">
+          <a href="!#">
             Конкурс
           </a>
         </li>
@@ -126,21 +126,32 @@
           </p>
         </fieldset>
         <div class="form__participant form__participant-comment">
-          <p class="participant__comment-title">ОПИШИТЕ СВОИ ЭМОЦИИ</p>
-          <textarea class="participant__comment-text" rows="8" name="comment">
+          <label class="participant__comment-title" for="comment">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
+          <textarea class="participant__comment-text" rows="8" name="comment" id="comment">
             Можно прям в красках, не стесняясь в выражениях
           </textarea>
           </div>
         <button class="button button--green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
         <p class="form__field--required">* — обязательные поля</p>
-
+        <div class="form__popup-window form__popup-window--warning">
+          <p class="form__popup-title warning__title">Что-то пошло не так!</p>
+          <p class="form__popup-description warning__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dicta dignissimos, illum impedit iste molestias officiis optio repellat veniam. Aut ea optio perspiciatis possimus, sint vitae!
+          </p>
+          <button class="button button--accept accept" aria-label="Проверьте все ли поля заполнены" type="submit">ok</button>
+        </div>
+        <div class="form__popup-window form__popup-window--success">
+          <p class="form__popup-title success__title">Ваша заявка отправлена</p>
+          <p class="form__popup-description success__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dicta dignissimos, eaque illo, illum impedit iste molestias officiis optio porro repellat veniam. Aut ea optio perspiciatis possimus, sint vitae!
+          </p>
+          <button class="button button--cancel cancel" aria-label="Заявка принята" type="submit">Закрыть окно</button>
+        </div>
       </form>
-
-
     </div>
   </section>
-
 </main>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <div class="page-footer__logo">
