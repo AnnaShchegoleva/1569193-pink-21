@@ -4,8 +4,210 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Пинк</title>
 </head>
-<body>
+<body class="page__body">
+<header class="page-header">
+  <a class="page-header__logo logo">
+    <img class="page-header__logo-image" src="img/pink-logo.svg" width="74" height="23" alt="Приложение «PINK»">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item  site-list__item--active" >
+          <a href="catalog.html">
+            Фотографии
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">
+            Конкурс
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="!#">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 <main class="page-main">
+  <div class="page-wrapper">
+    <div class="catalog__header">
+      <div class="catalog__background">
+        <h1 class="catalog__title">Фотографии пользователей</h1>
+      </div>
+    </div>
+    <div class="catalog__promo">
+      <p class="catalog__promo-text">
+        Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+      </p>
+    </div>
+    <div class="gallery">
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture panorama__label">
+          <span class="panorama__label-text">ПАНОРАМА ДНЯ</span>
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/320x137" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Анна</span></a>
+            <time datetime="2020-11-11T12:48:42.733Z">(5 минут назад)</time>
+            <p class="gallery__picture-caption-text">
+              Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">215</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Левон</span></a>
+            <time datetime="2020-11-11T07:22:42.733Z">(5 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Вчера он на луну летал, сегодня в руки к нам попал. </p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">356</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Антон</span></a>
+            <time datetime="2020-11-10T20:15:42.733Z">(12 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Соседи будут рады!</p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">666</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Борис</span></a>
+            <time datetime="2020-11-09T00:43:42.733Z">(20 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">215</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Сергей</span></a>
+            <time datetime="2020-11-08T18:54:42.733Z">(25 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Самая кубанская в мире!</p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">4</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Максим</span></a>
+            <time datetime="2020-11-07T13:19:42.733Z">(40 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Где снег-то?</p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">150</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="gallery__bunch">
+        <figure class="gallery__item gallery__item-picture">
+          <div class="gallery__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
+          <figcaption class="gallery__picture-caption">
+            <a class="profile__link" href="!#"><span class="user__name">Надежда</span></a>
+            <time datetime="2020-11-07T08:33:42.733Z">(45 часов назад)</time>
+            <p class="gallery__picture-caption-text">
+              Всем GM и взаимные лайки!</p>
+            <p class="likes"> Нравится:
+              <span class="amount-likes">2560</span>
+            </p>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+
+    <section class="new-picture">
+      <h2 class="visually-hidden">Добавь свою фотографию</h2>
+      <div class="new-picture__wrap">
+        <div class="new-picture__promo">
+          <p class="new-picture__promo-text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      <div class="new-picture__add">
+        <img src="https://via.placeholder.com/280x374" alt="Зимняя дорога в лесу">
+      </div>
+      <ul class="tools-edit__picture">
+        <li class="tools-edit tools-edit__crop">crop tool svg</li>
+        <li class="tools-edit tools-edit__fill">fill tool svg</li>
+        <li class="tools-edit tools-edit__adjustment">adjustment tool svg </li>
+      </ul>
+
+        <div class="manage-edit">
+          <div class="manage-edit__bar">
+            <div class="manage-edit__bar manage-edit__bar-crop">
+            <div class="manage-range">
+              <div class="bar" style="width: 80%; margin-left: 0"></div>
+              </div>
+               <div class="range-switch range-switch-max" tabindex="0" style="left: 90%"></div>
+            </div>
+          </div>
+
+          <div class="manage-edit__bar">
+            <div class="manage-edit__bar manage-edit__bar-fill">
+              <div class="manage-range">
+                <div class="bar" style="width: 80%; margin-left: 0"></div>
+              </div>
+              <div class="range-switch range-switch-max" tabindex="0" style="left: 10%"></div>
+            </div>
+          </div>
+
+            <div class="manage-edit__bar">
+            <div class="manage-edit__bar manage-edit__bar-adjustment">
+              <div class="manage-range">
+                <div class="bar" style="width: 80%; margin-left: 0"></div>
+              </div>
+              <div class="range-switch range-switch-max" tabindex="0" style="left: 50%"></div>
+            </div>
+            </div>
+          </div>
+        <button class="button button__publish" type="submit" name="new-picture-submit" aria-label="Опубликовать">Запостить</button>
+        <button class="button button__reset" type="reset" name="new-picture-cancel" aria-label="Отменить">Отмена</button>
+    </div>
+    </section>
+  </div>
 
 </main>
 <footer class="page-footer">
