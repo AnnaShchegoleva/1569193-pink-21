@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
 <body class="page__body">
 <header class="page-header">
-  <a class="page-header__logo logo">
+  <a class="page-header__logo logo" href="index.html" aria-label="Переход на главную страницу">
     <img class="page-header__logo-image" src="img/pink-logo.svg" width="74" height="23" alt="Приложение «PINK»">
   </a>
   <nav class="main-nav">
@@ -15,23 +15,23 @@
     </button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item  site-list__item--active">
-          <a href="index.html">
+        <li class="site-list__item ">
+          <a class="site-list__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">
+          <a class="site-list__link" href="catalog.html">
             Фотографии
           </a>
         </li>
-        <li class="site-list__item site-list__item--current">
-          <a href="!#">
+        <li class="site-list__item">
+          <a class="site-list__link  site-list__link--current">
             Конкурс
           </a>
         </li>
         <li class="site-list__item">
-          <a href="!#">
+          <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на HTML Academy">
             HTML Academy
           </a>
         </li>
@@ -39,114 +39,120 @@
     </div>
   </nav>
 </header>
+
 <main class="page-main">
   <h1 class="visually-hidden">Конкурс</h1>
   <section class="form">
-    <div class="form__wrapper">
-      <header class="form__header">
-        <h2 class="visually-hidden">
-          Слоган для конкурса
-        </h2>
-        <p class="concurs__slogan">
+    <h2 class="visually-hidden">
+      Форма пользователя для участия в конкурсе
+    </h2>
+    <div class="form__wrapper contest">
+      <header class="contest__header">
+         <p class="contest__slogan">
           Конкурс на самое безбашенное путешествие с Пинк
         </p>
-        <div class="concurs__background-image"></div>
+        <div class="contest__background-image"></div>
       </header>
-      <div class="concurs__promo">
-      <p class="concurs__promo-text">
+         <p class="contest__promo-text">
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
         </p>
-      </div>
-      <form class="form__concurs" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-contest" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Информация об участнике конкурса</h2>
-        <div class="form__participant form__participant-info">
-          <p class="form__item form__item-surname">
-            <label class="form__participant participant__surname" for="surname">ФАМИЛИЯ:</label>
-            <input class="field__surname" type="text" id="surname" aria-label="Фамилия участника конкурса" name="surname" value="Укажите фамилию *" required>
+        <div class="form__participant participant">
+          <p class="form__participant-item participant__info-surname">
+            <label class="participant__surname" for="surname">Фамилия:</label>
+            <input class="participant__surname-field" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" aria-label="Фамилия участника конкурса" required>
           </p>
-          <p class="form__item form__item-name">
-            <label class="form__participant participant__name" for="name">ИМЯ:</label>
-            <input class="field__name" type="text" id="name" aria-label="Имя участника" name="name" value="Введите ваше имя *" required>
+          <p class="form__participant-item participant__info-name">
+            <label class="participant__name" for="name">Имя:</label>
+            <input class="participant__name-field" type="text" id="name" name="name" placeholder="Введите ваше имя *" aria-label="Имя участника" required>
           </p>
-          <p class="form__item form__item-patronymic">
-            <label class="form__participant participant__patronymic" for="name">ОТЧЕСТВО:</label>
-            <input class="field__patronymic" type="text" id="patronymic" aria-label="Отчество участника" name="patronymic" value="Ну и отчество тоже">
+          <p class="form__participant-item participant__info-patronymic">
+            <label class="participant__patronymic" for="patronymic">Отчество:</label>
+            <input class="participant__patronymic-field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже" aria-label="Отчество участника">
           </p>
         </div>
-        <fieldset class="form__option form__option-achievements">
+        <fieldset class="form__option achievements">
           <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="shark" id="shark" aria-label="" checked>
-            <label for="shark">Сделал селфи с акулой</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="shark" id="shark" checked>
+            <label class="achievements__item-text" for="shark">Сделал селфи с акулой</label>
           </p>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="beach" id="beach" aria-label="" checked>
-            <label for="beach">Обгорел на пляже</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="beach" id="beach" checked>
+            <label class="achievements__item-text" for="beach">Обгорел на пляже</label>
           </p>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="norris" id="norris" aria-label="">
-            <label for="norris">Видел Чака Норриса</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="norris" id="norris">
+            <label class="achievements__item-text" for="norris">Видел Чака Норриса</label>
           </p>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="souvenirs" id="souvenirs" aria-label="">
-            <label for="souvenirs">Накупил сувениров</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+            <label class="achievements__item-text" for="souvenirs">Накупил сувениров</label>
           </p>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="tower" id="tower" aria-label="" checked>
-            <label for="tower">Удержал башню</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="tower" id="tower"  checked>
+            <label class="achievements__item-text" for="tower">Удержал башню</label>
           </p>
-          <p class="checkbox__item checkbox__item-achievements">
-            <input type="checkbox" class="visually-hidden" name="hotel" id="hotel" aria-label="">
-            <label for="hotel">Разгромил отель</label>
+          <p class="achievements__item">
+            <input class="achievements__item-checkbox" type="checkbox" name="hotel" id="hotel">
+            <label class="achievements__item-text" for="hotel">Разгромил отель</label>
           </p>
         </fieldset>
-        <div class="form__participant form__participant-contacts">
-          <p class="form__item form__item-phone">
-            <label class="form__participant participant__phone" for="phone">НОМЕР ТЕЛЕФОНА</label>
-            <input class="field__phone" type="text" id="phone" aria-label="Номер телефона участника конкурса" name="phone" value="Номер, пожалуйста">
+
+        <div class="form__participant participant-contacts">
+          <p class="form__participant-item participant-contacts__info-phone">
+            <label class="participant-contacts__phone" for="phone">Номер телефона</label>
+            <input class="participant-contacts__phone-field" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста" aria-label="Номер телефона участника конкурса">
           </p>
-          <p class="form__item form__item-email">
-            <label class="form__participant participant__email" for="email">АДРЕС ПОЧТЫ</label>
-            <input class="field__email" type="text" id="email" aria-label="Номер телефона участника конкурса" name="email" value="Введите почту *" required>
+          <p class="form__participant-item participant-contacts__info-email">
+            <label class="participant-contacts__email" for="email">Адрес почты</label>
+            <input class="participant-contacts__email-field" type="email" id="email" name="email" placeholder="Введите почту *" required aria-label="Номер телефона участника конкурса">
           </p>
         </div>
-        <fieldset class="form__option form__option-apps">
-          <legend class="apps__title">С каким приложением путешествовали?</legend>
-          <p class="checkbox__item checkbox__item-apps">
-            <input type="checkbox" class="visually-hidden" name="ios" id="ios" aria-label="" checked>
-            <label for="ios">Pink для iOS</label>
+        <fieldset class="form__option option-apps">
+          <legend class="option-apps__title">С каким приложением путешествовали?</legend>
+          <p class="option-apps__item">
+            <input  class="option-apps__item-checkbox" type="checkbox" name="ios" id="ios" checked>
+            <label class="option-apps__item-text" for="ios">Pink для iOS</label>
           </p>
-          <p class="checkbox__item checkbox__item-apps">
-            <input type="checkbox" class="visually-hidden" name="android" id="android" aria-label="">
-            <label for="android">Pink на Android</label>
+          <p class="option-apps__item">
+            <input class="option-apps__item-checkbox" type="checkbox"  name="android" id="android">
+            <label class="option-apps__item-text" for="android">Pink на Android</label>
           </p>
-          <p class="checkbox__item checkbox__item-apps">
-            <input type="checkbox" class="visually-hidden" name="windows" id="windows" aria-label="">
-            <label for="windows">Windows Phone</label>
+          <p class="option-apps__item">
+            <input class="option-apps__item-checkbox" type="checkbox" name="windows" id="windows">
+            <label class="option-apps__item-text" for="windows">Windows Phone</label>
           </p>
         </fieldset>
-        <div class="form__participant form__participant-comment">
-          <label class="participant__comment-title" for="comment">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
-          <textarea class="participant__comment-text" rows="8" name="comment" id="comment">
-            Можно прям в красках, не стесняясь в выражениях
+        <div class="form__participant participant-comment">
+          <label class="participant-comment__title" for="comment">Опишите свои эмоции</label>
+          <textarea class="participant-comment__text" rows="8" name="comment" id="comment">
+          Можно прям в красках, не стесняясь в выражениях
           </textarea>
           </div>
         <button class="button button--green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
-        <p class="form__field--required">* — обязательные поля</p>
-        <div class="form__popup-window form__popup-window--warning">
-          <p class="form__popup-title warning__title">Что-то пошло не так!</p>
-          <p class="form__popup-description warning__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dicta dignissimos, illum impedit iste molestias officiis optio repellat veniam. Aut ea optio perspiciatis possimus, sint vitae!
+        <p class="form-contest__field-required">* — обязательные поля</p>
+
+          <section class="form__popup popup-failure">
+            <h3 class="visually-hiding">Ошибка заполнения полей формы</h3>
+          <p class="popup-failure__title">
+            Что-то пошло не так!
           </p>
-          <button class="button button--accept accept" aria-label="Проверьте все ли поля заполнены" type="submit">ok</button>
-        </div>
-        <div class="form__popup-window form__popup-window--success">
-          <p class="form__popup-title success__title">Ваша заявка отправлена</p>
-          <p class="form__popup-description success__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dicta dignissimos, eaque illo, illum impedit iste molestias officiis optio porro repellat veniam. Aut ea optio perspiciatis possimus, sint vitae!
+          <p class="popup-failure__description">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
           </p>
-          <button class="button button--cancel cancel" aria-label="Заявка принята" type="submit">Закрыть окно</button>
-        </div>
+          <button class="button button--accept" type="button" aria-label="Проверьте все ли поля заполнены">ok</button>
+        </section>
+
+          <section class="form__popup popup-success">
+            <h3 class="visually-hiding">Форма для участия в конкурсе заполнена</h3>
+          <p class="popup-success__title">Ваша заявка отправлена</p>
+          <p class="popup-success__description">
+            Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+          </p>
+          <button class="button button--cancel" type="button" aria-label="Заявка принята">Закрыть окно</button>
+        </section>
       </form>
     </div>
   </section>
@@ -162,20 +168,20 @@
         <path d="M55.9384 1.38904C55.9228 1.21262 55.944 1.03487 56.0005 0.867114C56.0571 0.699353 56.1479 0.545245 56.267 0.414596C56.3862 0.283947 56.5311 0.179616 56.6926 0.108238C56.8541 0.0368607 57.0286 0 57.2051 0C57.3815 0 57.5561 0.0368607 57.7176 0.108238C57.8791 0.179616 58.024 0.283947 58.1431 0.414596C58.2623 0.545245 58.353 0.699353 58.4096 0.867114C58.4662 1.03487 58.4874 1.21262 58.4718 1.38904V13.6837L71.2282 0.551443C71.4899 0.279712 71.8455 0.119105 72.2216 0.10273C72.5468 0.115453 72.8548 0.252812 73.0821 0.486531C73.3094 0.72025 73.4388 1.03254 73.4436 1.35912C73.4366 1.52896 73.3961 1.69572 73.3245 1.84975C73.2529 2.00379 73.1516 2.14205 73.0264 2.25655L65.0785 10.1539L73.6523 20.6836C73.8764 20.9441 73.9998 21.2768 74 21.6209C73.9961 21.7933 73.9583 21.9633 73.8887 22.121C73.8191 22.2786 73.719 22.4209 73.5943 22.5395C73.4696 22.6582 73.3228 22.7509 73.1622 22.8123C73.0016 22.8737 72.8305 22.9026 72.6588 22.8973C72.4588 22.8891 72.2639 22.8322 72.0908 22.7314C71.9177 22.6306 71.7716 22.4891 71.6653 22.3189L63.3001 11.859L58.4718 16.7051V21.591C58.4718 21.7573 58.4391 21.922 58.3757 22.0756C58.3123 22.2293 58.2194 22.3689 58.1022 22.4865C57.9851 22.6041 57.846 22.6973 57.6929 22.761C57.5398 22.8246 57.3757 22.8574 57.21 22.8574C57.0443 22.8574 56.8803 22.8246 56.7272 22.761C56.5741 22.6973 56.435 22.6041 56.3179 22.4865C56.2007 22.3689 56.1078 22.2293 56.0443 22.0756C55.9809 21.922 55.9483 21.7573 55.9483 21.591V1.38904H55.9384Z" fill="white"/>
       </svg>
     </div>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/" target="_blank" aria-label="Twitter">
+    <div class="page-footer__socials socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="socials__link socials__link--twitter" href="https://twitter.com/" target="_blank" aria-label="Twitter">
             <span class="visually-hidden">twitter</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Facebook">
+        <li class="socials__item">
+          <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Facebook">
             <span class="visually-hidden">facebook</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com" target="_blank" aria-label="Youtube">
+        <li class="socials__item">
+          <a class="socials__link socials__link--youtube" href="https://www.youtube.com" target="_blank" aria-label="Youtube">
             <span class="visually-hidden">youtube</span>
           </a>
         </li>
@@ -191,5 +197,3 @@
     </div>
   </div>
 </footer>
-</body>
-</html>
