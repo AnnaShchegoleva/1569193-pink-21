@@ -174,20 +174,21 @@
 
     <section class="new-picture">
       <h2 class="visually-hidden">Добавь новую фотографию</h2>
-      <div class="new-picture__wrap">
+      <form class="new-picture-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="new-picture__wrap">
           <p class="new-picture__promo-text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-      <div class="new-picture__add">
-        <img src="https://via.placeholder.com/280x374" alt="Зимняя дорога в лесу">
-      </div>
-      <ul class="tools-edit">
-        <li class="tools-edit__item tools-edit__crop">crop tool svg</li>
-        <li class="tools-edit__item tools-edit__fill">fill tool svg</li>
-        <li class="tools-edit__item tools-edit__adjustment">adjustment tool svg </li>
-      </ul>
+        <div class="new-picture__add">
+          <img src="https://via.placeholder.com/280x374" alt="Зимняя дорога в лесу">
+        </div>
+        <ul class="tools-edit">
+          <li class="tools-edit__item tools-edit_crop">crop tool svg</li>
+          <li class="tools-edit__item tools-edit_fill">fill tool svg</li>
+          <li class="tools-edit__item tools-edit_adjustment">adjustment tool svg </li>
+        </ul>
 
         <div class="manage-edit">
           <div class="manage-edit__bar">
-            <div class="manage-edit__bar manage-edit__bar-crop">
+            <div class="manage-edit__bar manage-edit_bar-crop">
             <div class="manage-range">
               <div class="bar" style="width: 80%; margin-left: 0"></div>
               </div>
@@ -216,9 +217,10 @@
         <button class="button button__publish" type="submit" name="new-picture-submit" aria-label="Опубликовать">Запостить</button>
         <button class="button button__reset" type="reset" name="new-picture-cancel" aria-label="Отменить">Отмена</button>
     </div>
+      </form>
     </section>
-
 </main>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <div class="page-footer__logo">
@@ -258,3 +260,5 @@
     </div>
   </div>
 </footer>
+</body>
+</html>
