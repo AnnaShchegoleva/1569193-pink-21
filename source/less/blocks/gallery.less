@@ -1,0 +1,177 @@
+.gallery-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-group__promo-text {
+  line-height: 30px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.gallery__item {
+  text-align: left;
+  margin: 0;
+  background-color: @lightgray;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+
+.gallery__image-wrap-width-view {
+  margin-bottom: 17px;
+}
+
+.gallery__picture-caption {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.gallery__picture-caption-text {
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.gallery__picture-likes {
+  color: @magenta;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  padding-left: 35px;
+}
+
+.profile {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.profile__link {
+  text-decoration: none;
+  color: @darkblue;
+  font-weight: 700;
+}
+
+.profile__time {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-list__item {
+  background-color: @lightgray;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.gallery-list__image-wrap {
+  margin-bottom: 17px;
+}
+
+.gallery-list__picture-caption {
+  text-align: left;
+  margin: 0;
+  padding-left: 18px;
+  background-color: @lightgray;
+}
+
+.gallery-list__picture-caption-text {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.gallery-list__picture-likes {
+  margin: 0;
+  color: @magenta;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 35px;
+}
+
+.gallery__picture-likes::before,
+.gallery-list__picture-likes::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0.4em;
+  left: 0;
+}
+
+.amount-likes {
+  color: @magenta;
+}
+
+.new-picture-form {
+  background-color: @lightgray;
+}
+
+.new-picture__promo-text {
+  line-height: 214%;
+  background-color: @white;
+}
+
+.tools-edit {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  justify-content: center;
+  gap: 30px;
+}
+
+.manage-edit {
+  margin-top: 40px;
+}
+
+.manage-edit__bar-hidden {
+  display: none;
+}
+
+.manage-range {
+  position: relative;
+  margin-bottom: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manage-range .bar {
+  height: 2px;
+  background-color: @black;
+  position: relative;
+}
+
+.range-switch {
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-image: url("../img/level.svg");
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
