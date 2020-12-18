@@ -1,7 +1,10 @@
 .button {
   font-size: 18px;
-  line-height: 18px;
+  line-height: 167%;
   font-weight: 700;
+  text-transform: uppercase;
+  color: @white;
+  cursor: pointer;
 }
 
 .button__publish {
@@ -22,4 +25,43 @@
   height: 55px;
   box-sizing: border-box;
   margin-bottom: 40px;
+}
+
+.button--green {
+  background-color: @green;
+  border: 2px solid @green;
+  border-radius: 1px;
+  display: flex;
+  height: 59px;
+  width: 276px;
+  margin: 0 20px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.button--cancel {
+  background-color: @green;
+  border: 2px solid @green;
+  border-radius: 1px;
+  height: 59px;
+  width: 295px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.button--accept {
+  background-color: @green;
+  border: 2px solid @green;
+  border-radius: 1px;
+  height: 59px;
+  width: 295px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
