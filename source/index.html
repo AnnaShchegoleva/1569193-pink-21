@@ -2,10 +2,10 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
   </head>
   <body class="page__body">
   <header class="page-header">
@@ -185,39 +185,45 @@
 
       <section class="tariffs">
         <h2 class="visually-hidden">Таблица тарифов подключения</h2>
-        <table class="tariffs__table">
-          <tr class="tariffs__name">
-            <th class="tariffs__item-empty"></th>
-            <th class="tariffs__item">База<br>
-              <span class="tariffs__price">1,99 USD</span>
-            </th>
-            <th class="tariffs__item tariffs__item--current">Стандарт<br>
-              <span class="tariffs__price">3,99 USD</span>
+        <div class="tariffs__table-wrap">
+          <table class="tariffs__table">
+            <thead class="tariffs__title">
+              <tr class="tariffs__name">
+                <th class="tariffs__item tariffs__item--empty"></th>
+                <th class="tariffs__item">База<br>
+                  <span class="tariffs__price">1,99 USD</span>
+                </th>
+                <th class="tariffs__item tariffs__item--current">Стандарт<br>
+                  <span class="tariffs__price">3,99 USD</span>
               <!-- <span class="tariffs__popular">Хит</span>  Выполнить псевдоэлементом-->
-            </th>
-            <th class="tariffs__item">Анлим<br>
-              <span class="tariffs__price">9,99 USD</span>
-            </th>
-          </tr>
-          <tr class="tariffs__option tariffs__option--pink-filter">
-            <td class="tariffs__option-name">Розовый фильтр</td>
-            <td class="tariffs__option-item true">Да</td>
-            <td class="tariffs__option-item true">Да</td>
-            <td class="tariffs__option-item true">Да</td>
-          </tr>
-          <tr class="tariffs__option tariffs__option--emoticons">
-            <td class="tariffs__option-name">Смайлики</td>
-            <td class="tariffs__option-item false">Нет</td>
-            <td class="tariffs__option-item true">Да</td>
-            <td class="tariffs__option-item true">Да</td>
-          </tr>
-          <tr class="tariffs__option tariffs__option--comments">
-            <td class="tariffs__option-name">Смайлики</td>
-            <td class="tariffs__option-item false">Нет</td>
-            <td class="tariffs__option-item false">Нет</td>
-            <td class="tariffs__option-item true">Да</td>
-          </tr>
-        </table>
+                </th>
+                <th class="tariffs__item">Анлим<br>
+                  <span class="tariffs__price">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="tariffs__content">
+              <tr class="tariffs__option tariffs__option--pink-filter">
+                <td class="tariffs__option-name">Розовый фильтр</td>
+                <td class="tariffs__option-item true">Да</td>
+                <td class="tariffs__option-item true">Да</td>
+                <td class="tariffs__option-item true">Да</td>
+              </tr>
+              <tr class="tariffs__option tariffs__option--emoticons">
+                <td class="tariffs__option-name">Смайлики</td>
+                <td class="tariffs__option-item false">Нет</td>
+                <td class="tariffs__option-item true">Да</td>
+                <td class="tariffs__option-item true">Да</td>
+              </tr>
+              <tr class="tariffs__option tariffs__option--comments">
+                <td class="tariffs__option-name">Смайлики</td>
+                <td class="tariffs__option-item false">Нет</td>
+                <td class="tariffs__option-item false">Нет</td>
+                <td class="tariffs__option-item true">Да</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p class="tariffs__controls">
           <button class="tariffs__controls-toggles" type="button">1</button>
           <button class="tariffs__controls-toggles tariffs__controls-toggles--current" type="button">2</button>
@@ -229,20 +235,25 @@
           <p class="contacts__title">Остались вопросы?<br>
             Свяжитесь с нами!</p>
         <dl class="contacts__inner">
-          <dt class="contacts__phone-text">Звоните:</dt>
-          <dd class="contacts__data"><a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a></dd>
-          <dt class="contacts__email-text">Пишите:</dt>
-          <dd class="contacts__data"><a class="contacts__email" href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a></dd>
-          <dt class="contacts__address-text">Приезжайте в гости:</dt>
-          <dd class="contacts__data"><p class="contacts__address">
-            ул. Большая<br>
-            Конюшенная, 19/8
-          </p></dd>
+          <div class="contacts__phone-group">
+            <dt class="contacts__phone-text">Звоните:</dt>
+            <dd class="contacts__data"><a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a></dd>
+          </div>
+          <div class="contacts__email-group">
+            <dt class="contacts__email-text">Пишите:</dt>
+            <dd class="contacts__data"><a class="contacts__email" href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a></dd>
+          </div>
+          <div class="contacts__address-group">
+            <dt class="contacts__address-text">Приезжайте в гости:</dt>
+            <dd class="contacts__data"><p class="contacts__address">
+              ул. Большая<br>
+              Конюшенная, 19/8
+            </p></dd>
+          </div>
         </dl>
         <section class="map">
           <h2 class="visually-hidden">Адрес на карте</h2>
-          <img class="map-cover" src="/img/triangle-white-footer.svg">
-          <img class="map__image" src="img/map.jpg" height="auto" width="100%" alt="Наш адрес"/>
+          <img class="map__image" src="img/map.jpg" height="502px" width="1200px" alt="Наш адрес"/>
         </section>
       </section>
     </main>
@@ -286,6 +297,7 @@
         </div>
       </div>
     </footer>
+  <script src="js/script.js"></script>
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
@@ -304,8 +316,3 @@
   </script>
   </body>
 </html>
-
-
-    <!--
-        <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-    -->
