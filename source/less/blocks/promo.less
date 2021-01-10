@@ -75,9 +75,25 @@
   grid-gap: 35px;
 }
 
+.apps__item {
+  position: relative;
+}
 
-.apps__link {
+.apps__link--apple {
   display: block;
+  width: 47px;
+  height: 56px;
+}
+
+
+.apps__link--apple::after {
+  position: absolute;
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-image: url("/img/apple-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .apps__text {
