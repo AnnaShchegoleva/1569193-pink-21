@@ -40,6 +40,18 @@
   margin-bottom: 25px;
 }
 
+.contacts__email:focus,
+.contacts__email:hover {
+  color: @darkblue;
+  text-decoration: underline;
+}
+
+.contacts__email:active {
+  opacity: 0.3;
+  color: @darkblue;
+  text-decoration: inherit;
+}
+
 .contacts__phone,
 .contacts__email {
   color: @magenta;
@@ -67,7 +79,7 @@
 .map::before {
   content: url("../img/triangle-white-footer.svg");
   z-index: 1;
-  top: -65px;
+  top: 0;
   left: 0;
   width: 100%;
   position: absolute;

@@ -6,12 +6,23 @@
 
 .promo__info {
   margin-top: -60px;
+  position: relative;
+}
+
+.promo__info::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 280px;
+  height: 286px;
+  width: 320px;
+  background-image: url("../img/hand-phone-mobile.png");
 }
 
 .promo__title {
   position: relative;
   min-height: 462px;
-  min-width: 320px;
   margin-top: 95px;
   margin-bottom: 0;
   font-size: 24px;
@@ -21,17 +32,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.promo__title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 286px;
-  width: 320px;
-  background-image: url("../img/hand-phone-mobile.png");
 }
 
 .promo__download {
@@ -52,6 +52,16 @@
   padding-top: 10px;
   border: 2px solid @white;
   border-radius: 65px;
+}
+
+.apps__download-link:focus,
+.apps__download-link:hover {
+  background-color: @white;
+  color: @magenta;
+}
+
+.apps__download-link:active {
+  color: fade(@magenta, 30%);
 }
 
 .apps__list {

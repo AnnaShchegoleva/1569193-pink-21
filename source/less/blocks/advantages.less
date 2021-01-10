@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: auto;
   min-height: 828px;
   background-image: url("../img/grey-background.svg");
   background-repeat: no-repeat;
@@ -30,6 +29,7 @@
   margin: 0;
   gap: 43px;
   padding: 0;
+  position: relative;
 }
 
 .advantages__list li {
@@ -42,6 +42,10 @@
   align-items: center;
 }
 
+.advantages__item-info {
+  position: relative;
+}
+
 .advantages__item-title {
   margin: 0;
 }
@@ -50,9 +54,13 @@
   margin: 0;
 }
 
-.advantages__image-wrap-friends {
+.advantages__item--friends::after {
+  content: "";
+  position: absolute;
   min-width: 157px;
   min-height: 320px;
-  order: 1;
+  top: 320px;
   background-image: url("../img/app-friends.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }

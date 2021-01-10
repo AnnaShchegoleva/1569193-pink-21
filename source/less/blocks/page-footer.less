@@ -6,6 +6,19 @@
   margin-bottom: 30px;
 }
 
+.page-footer__logo:hover path,
+.page-footer__logo:focus path {
+  fill: @magenta;
+}
+
+.page-footer__logo:active path:not(:nth-last-child) {
+  fill: @darkblue;
+}
+
+.page-footer__logo:active path {
+  opacity: 0.3;
+}
+
 .page-footer__wrapper {
   position: relative;
   display: flex;
@@ -32,18 +45,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 55px;
+  height: 55px;
   border: 3px solid fade(@darkblue, 10%);
   border-radius: 50%;
-  padding: 25px;
 }
 
 .socials__link--twitter::after {
   content: "";
   position: absolute;
-  width: 18px;
-  height: 14px;
+  width: inherit;
+  height: inherit;
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -56,8 +68,8 @@
 .socials__link--facebook::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 20px;
+  width: inherit;
+  height: inherit;
   background-image: url("../img/facebook.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -66,11 +78,28 @@
 .socials__link--youtube::after {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 13px;
+  width: inherit;
+  height: inherit;
   background-image: url("../img/youtube.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.socials__link--twitter:hover,
+.socials__link--facebook:hover,
+.socials__link--youtube:hover,
+.socials__link--twitter:focus,
+.socials__link--facebook:focus,
+.socials__link--youtube:focus {
+  border: 3px solid (@darkblue);
+}
+
+.socials__link--twitter:active::after,
+.socials__link--facebook:active::after,
+.socials__link--youtube:active::after {
+  opacity: 0.3;
+  border: 3px solid fade(@darkblue, 10%);
+  border-radius: 50%;
 }
 
 .copyright__text {
@@ -81,4 +110,13 @@
 
 .copyright__link {
   display: inline-flex;
+}
+
+.copyright__link:hover path,
+.copyright__link:focus path {
+  fill: @darkblue;
+}
+
+.copyright__link:active path {
+  fill: fade(@darkblue, 30%);
 }
