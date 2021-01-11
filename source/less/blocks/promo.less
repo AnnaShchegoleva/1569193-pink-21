@@ -6,7 +6,13 @@
 
 .promo__info {
   margin-top: -60px;
+  margin-bottom: 30px;
   position: relative;
+  min-height: 462px;
+  background-image: url("../img/back-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .promo__info::after {
@@ -14,7 +20,7 @@
   display: block;
   position: absolute;
   left: 0;
-  bottom: 280px;
+  bottom: 0;
   height: 286px;
   width: 320px;
   background-image: url("../img/hand-phone-mobile.png");
@@ -22,23 +28,17 @@
 
 .promo__title {
   position: relative;
-  min-height: 462px;
   margin-top: 95px;
   margin-bottom: 0;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
-  background-image: url("../img/back-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .promo__download {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 33px;
   padding-bottom: 38px;
 }
 
@@ -46,8 +46,8 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  padding-left: 38px;
-  padding-right: 39px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 11px;
   padding-top: 10px;
   border: 2px solid @white;
@@ -88,10 +88,45 @@
 
 .apps__link--apple::after {
   position: absolute;
+  left: 0;
   content: "";
   width: inherit;
   height: inherit;
-  background-image: url("/img/apple-logo.svg");
+  background-image: url("../img/apple-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.apps__link--android {
+  display: block;
+  width: 43px;
+  height: 47px;
+}
+
+.apps__link--android::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-image: url("../img/android-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.apps__link--microsoft {
+  display: block;
+  width: 44px;
+  height: 41px;
+}
+
+.apps__link--microsoft::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-image: url("../img/microsoft-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
