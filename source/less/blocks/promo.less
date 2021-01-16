@@ -2,17 +2,52 @@
   color: @white;
   background-color: @blueback;
   margin-bottom: 46px;
-}
-
-.promo__info {
-  margin-top: -60px;
-  margin-bottom: 30px;
-  position: relative;
-  min-height: 462px;
+  margin-top: -66px;
+  padding-top: 90px;
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -110px;
+    padding-top: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 210px;
+  }
+}
+
+.promo__inner {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    grid-row-gap: 40px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 286px;
+      width: 320px;
+      background-image: url("../img/hand-phone-mobile.png");
+    }
+  }
+}
+
+.promo__info {
+  position: relative;
+  min-height: 320px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .promo__info::after {
@@ -27,19 +62,45 @@
 }
 
 .promo__title {
-  position: relative;
-  margin-top: 95px;
-  margin-bottom: 0;
+  margin: 0;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 120%;
   font-weight: 300;
+  z-index: 1;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 120%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    padding: 0 146px;
+  }
 }
 
 .promo__download {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 38px;
+  z-index: 1;
+  background-color: @blueback;
+  padding: 30px 20px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: transparent;
+  }
 }
 
 .apps__download-link {
@@ -84,7 +145,6 @@
   width: 47px;
   height: 56px;
 }
-
 
 .apps__link--apple::after {
   position: absolute;
