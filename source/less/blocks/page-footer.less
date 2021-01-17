@@ -25,6 +25,12 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin-left: 0;
+    gap: 340px;
+  }
 }
 
 .page-footer__socials {
@@ -100,6 +106,12 @@
   opacity: 0.3;
   border: 3px solid fade(@darkblue, 10%);
   border-radius: 50%;
+}
+
+.page-footer__copyright {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .copyright__text {

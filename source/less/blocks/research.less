@@ -5,6 +5,47 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: @lightgray;
+  }
+}
+
+.research__content {
+  margin: 0;
+  text-align: left;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 320px;
+    min-height: 280px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 276px;
+      width: 238px;
+      background-image: url("../img/clock.svg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 420px;
+    min-height: 420px;
+
+    &::before {
+      content: "";
+      /*display: block;
+      position: absolute;*/
+      height: 345px;
+      width: 298px;
+      background-image: url("../img/clock.svg");
+      background-repeat: no-repeat;
+      background-size: 298px 345px;
+    }
+  }
 }
 
 .research__title {
@@ -13,21 +54,8 @@
   line-height: 120%;
   margin: 0;
   margin-bottom: 24px;
+  padding-top: 35px;
   text-align: left;
-}
-
-.research__content {
-  margin: 0;
-  text-align: left;
-  margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    max-width: 310px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 570px;
-  }
 }
 
 .research__more-info {
