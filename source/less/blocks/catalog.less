@@ -2,13 +2,42 @@
   color: @white;
   min-height: 236px;
   min-width: 320px;
+  margin-top: -66px;
+  margin-bottom: 50px;
   background-color: @blueback;
-  background-image: url("../img/back-mobile.png");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position-y: -12px;
-  margin-bottom: 50px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+    /*background-size: 580px auto;*/
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+    margin-top: -110px;
+    padding-top: 200px;
+    background-image: url("../img/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+      /*background-size: 980px auto;*/
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 394px;
+    padding-top: 210px;
+    background-image: url("../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+      /*background-size: 1980px auto;*/
+    }
+  }
 }
 
 .catalog__title {
@@ -17,6 +46,12 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 33px;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0 40px 0 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+    top: 0;
+  }
 }

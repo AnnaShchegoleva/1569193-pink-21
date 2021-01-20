@@ -82,6 +82,10 @@
   margin: 0;
   position: relative;
   padding-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .profile {
@@ -160,6 +164,10 @@
   text-transform: uppercase;
   position: relative;
   padding-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .gallery__picture-likes::before,
@@ -173,10 +181,33 @@
   background-position: center;
   top: 0.4em;
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.gallery__picture-likes::after,
+.gallery-list__picture-likes::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0.4em;
+    right: 30px;
+  }
 }
 
 .amount-likes {
   color: @magenta;
+}
+
+.new-picture {
+  margin-bottom: 35px;
 }
 
 .new-picture-form {
@@ -186,6 +217,13 @@
 .new-picture__promo-text {
   line-height: 214%;
   background-color: @white;
+}
+
+.new-picture__wrap {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .new-picture__add {
@@ -202,10 +240,36 @@
   justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
-.manage-edit__bar-hidden {
+.manage-edit {
+  /*
+  margin-bottom: 30px;*/
+}
+
+.manage-edit__bar {
+  border-bottom: 1px solid fade(@darkblue, 10%);
+  margin-bottom: 30px;
+}
+
+.manage-edit__bar-fill {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.manage-edit__bar-adjustment {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .manage-range {

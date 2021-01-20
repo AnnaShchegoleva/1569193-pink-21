@@ -189,12 +189,13 @@
       <h2 class="visually-hidden">Добавь новую фотографию</h2>
       <div class="new-picture__inner container">
       <form class="new-picture-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="new-picture__promo-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="new-picture__wrap">
-          <p class="new-picture__promo-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <div class="new-picture__add">
+          <div class="new-picture__add">
           <img src="https://via.placeholder.com/280x374" alt="Зимняя дорога в лесу">
         </div>
-        <ul class="tools-edit">
+          <div class="new-picture__edit-group">
+          <ul class="tools-edit">
           <li class="tools-edit__item tools-edit__item-active tools-edit_crop">
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
@@ -229,7 +230,7 @@
           <!--</div>-->
 
           <!--<div class="manage-edit__bar">-->
-            <div class="manage-edit__bar manage-edit__bar-hidden manage-edit__bar-fill">
+            <div class="manage-edit__bar manage-edit__bar-fill">
               <div class="manage-range">
                 <div class="bar" style="width: 80%; margin-left: 0"></div>
                 <div class="range-switch range-switch-max" tabindex="0" style="left: 10%"></div>
@@ -238,7 +239,7 @@
           <!--</div>-->
 
           <!--<div class="manage-edit__bar">-->
-            <div class="manage-edit__bar manage-edit__bar-hidden manage-edit__bar-adjustment">
+            <div class="manage-edit__bar manage-edit__bar-adjustment">
               <div class="manage-range">
                 <div class="bar" style="width: 80%; margin-left: 0"></div>
                 <div class="range-switch range-switch-max" tabindex="0" style="left: 50%"></div>
@@ -248,7 +249,8 @@
           <!--</div>-->
         <button class="button button__publish" type="submit" name="new-picture-submit" aria-label="Опубликовать">Запостить</button>
         <button class="button button__reset" type="reset" name="new-picture-cancel" aria-label="Отменить">Отмена</button>
-    </div>
+        </div>
+        </div>
       </form>
       </div>
     </section>
