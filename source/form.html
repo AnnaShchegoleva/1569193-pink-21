@@ -80,7 +80,7 @@
           </p>
         </div>
         </div>
-        <div class="form__option-inner container">
+        <div class="form__option-inner-achievements container">
           <fieldset class="form__option achievements">
           <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
           <p class="achievements__item">
@@ -112,6 +112,8 @@
 
         <div class="form__participant-inner container">
           <div class="form__participant participant-contacts">
+            <fieldset class="participant-contacts__info">
+              <legend class="participant-contacts__info-title">контактная информация</legend>
             <p class="form__participant-item participant-contacts__info-phone">
             <label class="participant-contacts__phone" for="phone">Номер телефона</label>
             <input class="participant-contacts__phone-field" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста" aria-label="Номер телефона участника конкурса">
@@ -120,6 +122,7 @@
             <label class="participant-contacts__email" for="email">Адрес почты</label>
             <input class="participant-contacts__email-field" type="email" id="email" name="email" placeholder="Введите почту *" required aria-label="Номер телефона участника конкурса">
           </p>
+            </fieldset>
           </div>
         </div>
         <div class="form__option-inner container">
@@ -141,13 +144,20 @@
         </div>
           <div class="form__participant-comment-inner container">
         <div class="form__participant participant-comment">
+
+          <fieldset class="participant-comment__info">
+            <legend class="participant-comment__info-title">Опишите свои эмоции</legend>
+
           <label class="participant-comment__title" for="comment">Опишите свои эмоции</label>
           <textarea class="participant-comment__text" rows="8" name="comment" id="comment">Можно прям в красках, не стесняясь в выражениях
           </textarea>
+          </fieldset>
           </div>
-        <button class="button button-green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
+          </div>
+          <div class="form__participant-send container">
+          <button class="button button-green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
           <p class="form-contest__field-required"><span class="star">*</span> — обязательные поля</p>
-          </div>
+        </div>
         </form>
     </div>
   </section>

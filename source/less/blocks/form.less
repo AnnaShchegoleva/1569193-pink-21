@@ -85,21 +85,91 @@
   display: flex;
   flex-direction: column;
   /*margin: 42px 20px 0 20px;*/
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    padding: 0 130px;
+  }
 }
 
 .form-contest__inner {
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .form__participant-inner {
   width: 100%;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 0;
+  }
 }
 
 .form__participant {
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    row-gap: 50px;
+  }
+}
+
+.participant-contacts {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.participant-contacts__info {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @gray;
+    border-radius: 1px;
+    padding: 0 20px;
+    padding-top: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+}
+
+.participant-contacts__info-title {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    line-height: 214%;
+    color: @magenta;
+    text-transform: uppercase;
+    padding: 0 35px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+  }
 }
 
 .form__participant-item {
@@ -112,15 +182,33 @@
     align-items: center;
     margin-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
-.form__participant-item:not(:first-child) {
-  /*margin-top: 18px;*/
+.participant-contacts__info-phone,
+.participant-contacts__info-email { //Контейнер для телефона и мыла
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
+
+.participant-contacts__phone,
+.participant-contacts__email { //Лейбел для телефона и мыла
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-left: 20px;
+  }
+}
+
 
 .form__participant-item > label {
   color: @magenta;
   text-transform: uppercase;
+  font-size: 14px;
   line-height: 214%;
   margin-left: 25px;
 
@@ -168,6 +256,24 @@
     border: 2px solid @gray;
     border-radius: 1px;
     background-color: transparent;
+    padding-top: 50px;
+  }
+}
+
+.option-apps {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+}
+
+.achievements {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 12px;
   }
 }
 
@@ -175,7 +281,38 @@
   width: 100%;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0;
+  }
 }
+
+.form__option-inner-achievements {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 0;
+  }
+}
+
 
 .form__option > legend {
   position: absolute;
@@ -183,16 +320,30 @@
   top: 35px;
   left: 0;
   box-sizing: border-box;
-  text-align: center;
   line-height: 129%;
   color: @magenta;
   text-transform: uppercase;
   padding: 0 35px;
+
+  @media (min-width: @tablet-width) {
+    position: initial;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 214%;
+  }
 }
 
 .achievements__item {
   margin: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+  }
 }
 
 .achievements__item-text {
@@ -224,7 +375,12 @@
 
 .option-apps__item {
   /*margin-top: 40px;*/
+  margin: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 50px;
+  }
 }
 
 .option-apps__item-text {
@@ -256,6 +412,13 @@
 
 .form__participant-comment-inner {
   width: 100%;
+  margin-bottom: 45px;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0;
+  }
 }
 
 .participant-comment {
@@ -265,8 +428,60 @@
   text-transform: uppercase;
 }
 
+.participant-comment__info { //Fieldset for tablet
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @gray;
+    border-radius: 1px;
+    padding: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 60px;
+  }
+}
+
+.form__participant-send {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.participant-comment__info-title { //Заголовок для Fildset
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    line-height: 214%;
+    font-size: 14px;
+    color: @magenta;
+    text-transform: uppercase;
+    padding: 0 35px;
+    margin: 0 auto;
+  }
+}
+
 .participant-comment__title {
   margin-bottom: 15px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .participant-comment__text {
@@ -276,6 +491,7 @@
   padding: 7px;
   border: 2px solid @gray;
   border-radius: 1px;
+  width: 100%;
 }
 
 .star {
