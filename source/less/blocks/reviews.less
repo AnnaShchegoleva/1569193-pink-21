@@ -1,14 +1,68 @@
 .reviews {
-  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__item:not(:first-child) {
+  display: none;
+}
+
+.reviews__author-info {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews__author-name {
   font-size: 18px;
-  line-height: 30px;
-  font-style: normal;
+  line-height: 167%;
+  font-style: inherit; //чтоб убрать Italic <cite>
   font-weight: 700;
+  margin-bottom: 10px;
+  display: inherit;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 150%;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 125%;
+  }
+}
+
+.reviews__author-occupation {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    order: 3;
+  }
 }
 
 .reviews__text {
   line-height: 30px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 167%;
+    margin-bottom: 25px;
+  }
+}
+
+.reviews__prev,
+.reviews__next {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

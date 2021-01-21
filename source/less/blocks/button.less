@@ -2,7 +2,6 @@
   font-size: 18px;
   line-height: 167%;
   font-weight: 700;
-  text-transform: uppercase;
   color: @white;
   cursor: pointer;
 }
@@ -11,41 +10,105 @@
   border-radius: 30px;
   color: @magenta;
   border: 3px solid @magenta;
-  width: 280px;
-  height: 55px;
-  box-sizing: border-box;
+  min-width: 280px;
+  min-height: 55px;
   margin-bottom: 15px;
+}
+
+.button__publish:focus,
+.button__publish:hover {
+  background-color: @magenta;
+  color: @white;
+  border: none;
+}
+
+.button__publish:active {
+  color: fade(@white, 30%);
+  border: none;
 }
 
 .button__reset {
   border-radius: 30px;
-  color: @gray;
-  border: 3px solid @gray;
-  width: 280px;
-  height: 55px;
-  box-sizing: border-box;
+  color: fade(@darkblue, 10%);
+  border: 3px solid fade(@darkblue, 10%);
+  min-width: 280px;
+  min-height: 55px;
   margin-bottom: 40px;
 }
 
-.button--green {
+.button__reset:focus,
+.button__reset:hover {
+  color: fade(@darkblue, 30%);
+  border: 3px solid fade(@darkblue, 30%);
+}
+
+.button__reset:active {
+  background-color: fade(@darkblue, 30%);
+  color: fade(@white, 30%);
+  border: none;
+}
+
+.button-green {
   background-color: @green;
   border: 2px solid @green;
   border-radius: 1px;
+  text-transform: uppercase;
   display: flex;
-  height: 59px;
-  width: 276px;
-  margin: 0 20px;
+  min-height: 59px;
+  min-width: 276px;
   align-items: center;
   justify-content: center;
   align-self: center;
 }
 
+.button-green:focus,
+.button-green:hover {
+  background-color: @darkgreen;
+  border: 2px solid @darkgreen;
+}
+
+.button-green:active {
+  color: fade(@white, 30%);
+}
+
+.button-green:disabled {
+  background-color: @gray;
+  border: 2px solid @gray;
+}
+
+/*____________
+
+.copyright__link:hover path,
+.copyright__link:focus path {
+  fill: @darkblue;
+}
+
+.copyright__link:active path {
+  fill: fade(@darkblue, 30%);
+}
+
+
+.page-footer__logo:hover path,
+.page-footer__logo:focus path {
+  fill: @magenta;
+}
+
+.page-footer__logo:active path:not(:nth-last-child) {
+  fill: @darkblue;
+}
+
+.page-footer__logo:active path {
+  opacity: 0.3;
+}
+
+_________*/
+/*
 .button--cancel {
   background-color: @green;
   border: 2px solid @green;
   border-radius: 1px;
-  height: 59px;
-  width: 295px;
+  min-height: 59px;
+  min-width: 295px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -57,11 +120,12 @@
   background-color: @green;
   border: 2px solid @green;
   border-radius: 1px;
-  height: 59px;
-  width: 295px;
+  min-height: 59px;
+  min-width: 295px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
 }
+*/

@@ -2,15 +2,20 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
 </head>
 <body class="page__body">
 <header class="page-header">
+  <div class="page-header__inner container">
   <a class="page-header__logo logo" href="index.html" aria-label="Переход на главную страницу">
-    <img class="page-header__logo-image" src="img/pink-logo-word-only.svg" width="74" height="23" alt="Приложение «PINK»">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+      <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg">
+      <img class="page-header__logo-image" src="img/pink-logo-mobile.svg" width="74" height="23" alt="Приложение «PINK»">
+    </picture>
   </a>
   <nav class="main-nav main-nav--nojs main-nav--closed">
     <button class="main-nav__toggle" type="button">
@@ -41,6 +46,7 @@
       </ul>
     </div>
   </nav>
+  </div>
 </header>
 
 
@@ -51,14 +57,15 @@
     </div>
       <section class="gallery-group">
         <h2 class="visually-hidden">Опубликованные фотографии</h2>
-        <p class="gallery-group__promo-text">
+        <p class="gallery-group__promo-text container">
         Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </p>
       <section class="gallery">
         <h3 class="visually-hidden">Широкоформатная фотография</h3>
+        <div class="gallery__image-wrap-width-view"><img src="https://via.placeholder.com/320x137" alt=""></div>
+        <div class="gallery__inner container">
         <div class="gallery__item gallery__item--width-view">
-          <!-- <span class="panorama__label-text">Панорама дня</span> Псевдоэлемент-->
-          <div class="gallery__image-wrap-width-view"><img src="https://via.placeholder.com/320x137" alt=""></div>
+
           <div class="gallery__picture-caption">
             <p class="profile">
             <a class="profile__link" href="!#"><span class="profile__user-name">Анна</span></a>
@@ -72,8 +79,9 @@
             </p>
           </div>
         </div>
-      </section>
+        </div>
 
+      <div class="gallery-list__inner container">
       <ul class="gallery-list">
         <li class="gallery-list__item">
           <div class="gallery-list__image-wrap"><img src="https://via.placeholder.com/280x180" alt=""></div>
@@ -173,17 +181,21 @@
           </div>
         </li>
       </ul>
+      </div>
+      </section>
     </section>
 
     <section class="new-picture">
       <h2 class="visually-hidden">Добавь новую фотографию</h2>
+      <div class="new-picture__inner container">
       <form class="new-picture-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="new-picture__promo-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="new-picture__wrap">
-          <p class="new-picture__promo-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <div class="new-picture__add">
+          <div class="new-picture__add">
           <img src="https://via.placeholder.com/280x374" alt="Зимняя дорога в лесу">
         </div>
-        <ul class="tools-edit">
+          <div class="new-picture__edit-group">
+          <ul class="tools-edit">
           <li class="tools-edit__item tools-edit__item-active tools-edit_crop">
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
@@ -218,7 +230,7 @@
           <!--</div>-->
 
           <!--<div class="manage-edit__bar">-->
-            <div class="manage-edit__bar manage-edit__bar-hidden manage-edit__bar-fill">
+            <div class="manage-edit__bar manage-edit__bar-fill">
               <div class="manage-range">
                 <div class="bar" style="width: 80%; margin-left: 0"></div>
                 <div class="range-switch range-switch-max" tabindex="0" style="left: 10%"></div>
@@ -227,7 +239,7 @@
           <!--</div>-->
 
           <!--<div class="manage-edit__bar">-->
-            <div class="manage-edit__bar manage-edit__bar-hidden manage-edit__bar-adjustment">
+            <div class="manage-edit__bar manage-edit__bar-adjustment">
               <div class="manage-range">
                 <div class="bar" style="width: 80%; margin-left: 0"></div>
                 <div class="range-switch range-switch-max" tabindex="0" style="left: 50%"></div>
@@ -237,13 +249,15 @@
           <!--</div>-->
         <button class="button button__publish" type="submit" name="new-picture-submit" aria-label="Опубликовать">Запостить</button>
         <button class="button button__reset" type="reset" name="new-picture-cancel" aria-label="Отменить">Отмена</button>
-    </div>
+        </div>
+        </div>
       </form>
+      </div>
     </section>
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
+  <div class="page-footer__inner container">
     <div class="page-footer__logo">
       <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M71.005 18.5486C71.0049 18.2125 71.1358 17.8898 71.3697 17.6494C71.6037 17.409 71.922 17.2701 72.2568 17.2623H79.39C84.4469 17.2623 87.7751 19.9645 87.7751 24.3918V24.4516C87.7751 29.2977 83.7415 31.8105 78.9727 31.8105H73.5384V38.611C73.5539 38.7874 73.5328 38.9651 73.4762 39.1329C73.4196 39.3006 73.3289 39.4547 73.2097 39.5854C73.0906 39.716 72.9457 39.8204 72.7842 39.8918C72.6227 39.9631 72.4481 40 72.2717 40C72.0952 40 71.9207 39.9631 71.7592 39.8918C71.5977 39.8204 71.4527 39.716 71.3336 39.5854C71.2145 39.4547 71.1237 39.3006 71.0671 39.1329C71.0106 38.9651 70.9894 38.7874 71.005 38.611V18.5486ZM79.0721 29.5171C82.7778 29.5171 85.2119 27.5228 85.2119 24.5314V24.4716C85.2119 21.2608 82.8175 19.5956 79.2509 19.5956H73.588V29.4772L79.0721 29.5171Z" fill="#283645"/>
@@ -282,21 +296,6 @@
     </div>
   </div>
 </footer>
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>

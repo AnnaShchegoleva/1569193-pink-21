@@ -1,8 +1,10 @@
 .main-nav {
+  /*
   position: relative;
   min-height: 66px;
   width: auto;
   z-index: 1;
+  */
 }
 
 .main-nav__toggle {
@@ -16,17 +18,25 @@
   height: 50px;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 15px;
+  /*top: 15px;*/
   left: 17px;
   width: 36px;
-  height: 2px;
+  height: 3px;
   background-color: @white;
   box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
@@ -34,8 +44,11 @@
   box-shadow:
     0 8px 0 0 fade(@white, 30%),
     0 16px 0 0 fade(@white, 30%);
-}
 
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
 
 .main-nav__list {
   list-style: none;
@@ -50,17 +63,62 @@
 
 .main-nav--closed .site-list {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
+.main-nav__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 1024px;
+  }
+}
+
+/*.site-list {
+  @media (min-width: @desktop-width) {
+    width: 760px;
+    outline: 5px solid rgba(0, 255, 0, 0.8);
+    outline-offset: -5px;
+  }
+}*/
+
 .site-list__item {
-  min-height: 63px;
+  /*min-height: 63px;*/
   min-width: 100%;
   padding-top: 25px;
   background-color: @blueback;
   box-shadow: 0 1px 0 @black, 0 1px 0 inset fade(@white, 15%);
+
+  @media (min-width: @desktop-width) {
+    /*min-height: 110px;
+    padding-top: 40px;*/
+    background-color: transparent;
+    box-shadow: none;
+    min-width: inherit;
+    font-weight: 400;
+    text-transform: none;
+    padding-top: 0;
+    margin-right: 70px;
+  }
+}
+
+.site-list__item:first-child { //Пока так
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+  }
 }
 
 .site-list__link {
   color: @white;
   text-decoration: none;
+}
+
+.site-list__link:focus,
+.site-list__link:hover {
+  color: @magenta;
+}
+
+.site-list__link:active {
+  color: fade(@magenta, 30%);
 }
