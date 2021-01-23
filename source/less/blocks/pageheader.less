@@ -10,12 +10,12 @@
 }
 
 .page-header__inner {
-  padding: 0;
   width: 100%;
   display: flex;
   align-items: center;
   min-height: 66px;
-  margin: 0;
+  /*margin: 0;*/
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     min-height: 110px;
@@ -23,5 +23,16 @@
 }
 
 .page-header__logo {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 130px;
+  }
 }

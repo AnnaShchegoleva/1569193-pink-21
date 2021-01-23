@@ -76,6 +76,28 @@
   border: 2px solid @gray;
 }
 
+.likes-heart {
+  border: none;
+  height: 17px;
+  width: 12px;
+  position: relative;
+  cursor: pointer;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+.likes-heart--top {
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+}
+
 /*____________
 
 .copyright__link:hover path,
