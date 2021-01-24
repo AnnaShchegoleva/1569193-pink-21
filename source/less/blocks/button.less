@@ -13,6 +13,11 @@
   min-width: 280px;
   min-height: 55px;
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-width: 183px;
+  }
 }
 
 .button__publish:focus,
@@ -34,6 +39,15 @@
   min-width: 280px;
   min-height: 55px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-width: 183px;
+  }
 }
 
 .button__reset:focus,
