@@ -13,6 +13,11 @@
   min-width: 280px;
   min-height: 55px;
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-width: 183px;
+  }
 }
 
 .button__publish:focus,
@@ -34,6 +39,15 @@
   min-width: 280px;
   min-height: 55px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-width: 183px;
+  }
 }
 
 .button__reset:focus,
@@ -59,6 +73,7 @@
   align-items: center;
   justify-content: center;
   align-self: center;
+  width: 100%;
 }
 
 .button-green:focus,
@@ -74,6 +89,59 @@
 .button-green:disabled {
   background-color: @gray;
   border: 2px solid @gray;
+}
+
+.button--accept {
+  margin-top: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.button--cancel {
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 456px;
+  }
+}
+
+.button-send {
+  width: 296px;
+  height: 59px;
+  /*  @media (min-width: @tablet-width) {
+    width: ;
+  }
+  @media (min-width: @desktop-width-width) {
+    width: ;
+  }*/
+}
+
+.likes-heart {
+  border: none;
+  height: 17px;
+  width: 12px;
+  position: relative;
+  cursor: pointer;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+.likes-heart--top {
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }
 
 /*____________
