@@ -23,6 +23,9 @@
     </button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <span class="site-list__item-first"></span>
+        </li>
         <li class="site-list__item ">
           <a class="site-list__link" href="index.html">
             Главная
@@ -62,7 +65,7 @@
       </header>
       <p class="contest__promo-text container">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__promo-text-add">Пожалуйста, заполните форму ниже:</span>
         </p>
-        <form class="form-contest" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-contest container" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Информация об участнике конкурса</h2>
         <div class="form-contest__inner container">
           <div class="form__participant participant">
@@ -149,12 +152,12 @@
             <legend class="participant-comment__info-title">Опишите свои эмоции</legend>
 
           <label class="participant-comment__title" for="comment">Опишите свои эмоции</label>
-          <textarea class="participant-comment__text" rows="8" name="comment" id="comment">Можно прям в красках, не стесняясь в выражениях
+          <textarea class="participant-comment__text" rows="8" name="comment" id="comment" placeholder="Можно прям в красках, не стесняясь в выражениях">
           </textarea>
           </fieldset>
           </div>
           </div>
-          <div class="form__participant-send container">
+          <div class="form__participant-send">
           <button class="button button-green button-send" aria-label="Отправить заявку на участие в конкурсе" type="submit">Отправить форму</button>
           <p class="form-contest__field-required"><span class="star">*</span> — обязательные поля</p>
         </div>
@@ -214,8 +217,9 @@
   <p class="popup-failure__description">
     Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
   </p>
-  <button class="button button-green button--accept" type="button" aria-label="Проверьте все ли поля заполнены">ok</button>
-<!--  </div>-->
+  <div class="popup-background popup-background__failure">
+    <button class="button button-green button--accept" type="button" aria-label="Проверьте все ли поля заполнены">ok</button>
+  </div>
 </section>
 
 <!--<div class="form-popup__inner-success container">-->
