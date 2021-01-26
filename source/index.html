@@ -13,7 +13,7 @@
       <nav class="main-nav main-nav--nojs main-nav--opened">
         <a class="page-header__logo logo">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+            <source media="(min-width: 960px)" srcset="img/logotype-white-desktop.svg">
             <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg">
             <img class="page-header__logo-image" src="img/pink-logo-mobile.svg" alt="Приложение «PINK»"><!--width="74" height="23"-->
           </picture>
@@ -299,7 +299,11 @@
       </section>
     <section class="map">
     <h2 class="visually-hidden">Адрес на карте</h2>
-    <img class="map__image" src="img/map.jpg" height="502px" width="1200px" alt="Карта проезда"/>
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 660px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+        <img class="map__image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта проезда"/>
+      </picture>
     </section>
     </main>
     <footer class="page-footer">

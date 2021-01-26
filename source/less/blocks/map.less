@@ -3,31 +3,30 @@
   margin-bottom: 30px;
 }
 
-.map-cover {
-  position: absolute;
-  width: 100%;
-}
 
 .map::before {
-  overflow: hidden;
+  /*overflow: hidden;*/
   content: "";
   z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 30px;
   position: absolute;
   background-image: url("../img/triangle-white-footer.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; //без этого не работает
 
   @media (min-width: @tablet-width) {
-    height: 98px;
+    height: 66px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 120px;
-    background-size: auto;
+    height: 97px;
   }
+}
+
+.map__image {
+  height: 100%;
 }
