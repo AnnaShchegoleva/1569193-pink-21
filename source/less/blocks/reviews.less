@@ -1,5 +1,27 @@
 .reviews {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.reviews::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: -100px;
+    height: 63px;
+    width: 79px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.reviews__list {
+  margin-bottom: 40px;
 }
 
 .reviews__item {
@@ -56,6 +78,46 @@
     line-height: 167%;
     margin-bottom: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 690px;
+  }
+}
+
+.reviews__controls {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews__controls-toggles {
+  background-image: url("../img/slider.svg");
+  background-repeat: no-repeat;
+  height: 6px;
+  width: 6px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 66%;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.reviews__controls-toggles--current {
+  background-image: url("../img/current-slider.svg");
+  height: 12px;
+  width: 9px;
+  opacity: inherit;
+}
+
+.reviews__inner {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .reviews__prev,
@@ -65,4 +127,29 @@
   @media (min-width: @desktop-width) {
     display: block;
   }
+}
+
+.reviews__prev {
+  background-image: url("../img/left-arrow.svg");
+  background-repeat: no-repeat;
+  height: 41px;
+  width: 22px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+}
+
+.reviews__next {
+  background-image: url("../img/right-arrow.svg");
+  background-repeat: no-repeat;
+  height: 41px;
+  width: 22px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
